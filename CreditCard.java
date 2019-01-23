@@ -19,10 +19,6 @@ public class CreditCard {
         this.limit = limit;
     }
 
-    public CreditCard(String customer, String bank, String account, int limit){
-        this(customer, bank, account, limit, 0.0);
-    }
-
     //Accessor methods:
 
     public String getCustomer() {return customer;}
@@ -32,12 +28,34 @@ public class CreditCard {
     public double getBalance(){return balance;}
 
     //Update methods
+
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+    public void setCustomer(String customer) {
+        this.customer = customer;
+    }
+
+    public void setBank(String bank) {
+        this.bank = bank;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
     public boolean deposit(double price){  //make a withdrawal
         if (price + balance > limit)
             return false;
         //charge is successful
         balance +=price;
         return true;
+    }
+
+    public void makePayement(double amount){
+        balance-=amount;
     }
 
 
