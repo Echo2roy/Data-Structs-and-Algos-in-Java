@@ -13,10 +13,12 @@ public class P1_29 {
         double d;
         BigDecimal abd = new BigDecimal("0");
         Scanner input = new Scanner(System.in);
+
         System.out.print("Enter the no. of people in room: ");
         i = input.nextInt();
         n = 365;
         r = 365 - i;
+
         // Calculate the nPr
 
         abd = factor(n).divide(factor(n-(n-r))) ;
