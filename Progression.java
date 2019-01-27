@@ -27,9 +27,9 @@ public class Progression {
     //Prints the next n values of the progression, separated by the spaces
 
     public void printProgression(int n){
-        System.out.print(nextValue());
-        for(int J = 1; J < n; j++)
-            System.out.println(" " + nextValue());
+        System.out.print(nextValue()); //print first value wwithout leading space
+        for(int j = 1; j < n; j++)
+            System.out.print(" " + nextValue());
         System.out.println();
     }
 
